@@ -1,14 +1,17 @@
-# openapi_viewer-js:
-#   filter: rjsmin
-#   output: ckanext-openapi_viewer/%(version)s-openapi_viewer.js
-#   contents:
-#     - js/openapi_viewer.js
-#   extra:
-#     preload:
-#       - base/main
+openapi_viewer-js:
+  filter: rjsmin
+  output: ckanext-openapi_viewer/%(version)s-openapi_viewer.js
+  contents:
+    - js/openapi_viewer.js
+    - js/swagger-ui.js
+  extra:
+    preload:
+      - base/main
+      - ckanext-openapi_viewer/openapi_viewer-css
 
-# openapi_viewer-css:
-#   filter: cssrewrite
-#   output: ckanext-openapi_viewer/%(version)s-openapi_viewer.css
-#   contents:
-#     - css/openapi_viewer.css
+
+openapi_viewer-css:
+  filter: cssrewrite
+  output: ckanext-openapi_viewer/%(version)s-openapi_viewer.css
+  contents:
+    - css/swagger-ui.css

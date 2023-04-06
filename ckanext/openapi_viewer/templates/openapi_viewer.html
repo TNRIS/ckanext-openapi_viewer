@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block subtitle %}{% endblock %}
+
+{% block page %}
+  <div id="swagger-ui">
+    <pre data-module="openapi_viewer">
+      <div class="loading">
+        {{ _('Loading...') }}
+      </div>
+    </pre>
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    var resource_url = {{ resource.url | tojson }};
+  </script>
+
+  {% asset 'ckanext-openapiview/openapi_viewer-js' %}
+{% endblock %}
+
+{% block styles %}{% endblock %}
+{% block custom_styles %}{% endblock %}
