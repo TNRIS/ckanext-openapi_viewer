@@ -11,6 +11,7 @@ ckan.module('openapi_viewer', function (jQuery) {
         }
       },
       initialize: function () {
+        console.log("REsource URL" + resource_url);
         const ui = SwaggerUIBundle({
             url: resource_url,
             dom_id: '#swagger-ui',

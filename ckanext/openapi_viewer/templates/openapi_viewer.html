@@ -13,11 +13,13 @@
 {% endblock %}
 
 {% block scripts %}
+
   <script>
     var resource_url = {{ resource.url | tojson }};
   </script>
 
-  {% asset 'ckanext-openapiview/openapi_viewer-js' %}
+  {% asset 'ckanext-openapi_viewer/openapi_viewer-js' %}
+
 {% endblock %}
 
 {% block styles %}{% endblock %}
